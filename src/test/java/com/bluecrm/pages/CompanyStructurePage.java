@@ -53,24 +53,24 @@ public class CompanyStructurePage {
     @FindBy(xpath = "//span[.='Search']")
     public WebElement searchButton;
 
-    @FindBy(xpath="//input[contains(@id,'_user_input')]")
+    @FindBy(xpath = "//input[contains(@id,'_user_input')]")
     public WebElement searchInputBox;
 
 
-    @FindBy(xpath="//span[.='Recent']")
-    public WebElement  recentButton;
+    @FindBy(xpath = "//span[.='Recent']")
+    public WebElement recentButton;
 
-    @FindBy(xpath="//div[.='gyjasgd sdfasdfuk']")
-    public WebElement  recentDropdown;
+    @FindBy(xpath = "//div[.='gyjasgd sdfasdfuk']")
+    public WebElement recentDropdown;
 
-    public void dropdownOption(String name){
-        Driver.getDriver().findElement(By.xpath("//div[.='"+name+"']"));
+    public void dropdownOption(String name) {
+        Driver.getDriver().findElement(By.xpath("//div[.='" + name + "']"));
     }
 
-    @FindBy(xpath="(//div[@bx-tooltip-user-id='486'])[2]")
+    @FindBy(xpath = "(//div[@bx-tooltip-user-id='486'])[2]")
     public WebElement searchDropdown;
 
-    @FindBy(xpath="//span[.='Company']")
+    @FindBy(xpath = "//span[.='Company']")
     public WebElement companyButton;
 
 
@@ -95,38 +95,30 @@ public class CompanyStructurePage {
     @FindBy(xpath = "//div[@id='popup-window-content-BXStructure']")
     public WebElement popupDepartmentContent;
 
-    @FindBy(xpath = "(//div[@title='Add child department'])[2]")
+    @FindBy(xpath = "//a[@class='department-profile-events-item department-profile-subsection']")
+    //@FindBy(xpath = "//*[@id=\"bx_str_361\"]/div[1]/div[2]/div[3]")
+    public WebElement addChildDepartment;
+
+
+    @FindBy(xpath = "(//div[@class='structure-edit-icon'])[2]")
+
     public WebElement editDepartment;
 
 
+    @FindBy(xpath = "(//div[@title='Delete department'])[2]")
+
+    public WebElement deleteDepartment;
+
+    @FindBy(xpath = "(//form[@method='POST'])[2]")
+    public WebElement addedMessage;
 
 
+    @FindBy(xpath = "//span[.='Save']")
+    public WebElement saveButton;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "(//div[.='Gurhan'])[1]")
+    public WebElement recentOption;
 
 
 }

@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -201,26 +202,100 @@ public class CompanyStructureStepDef {
         Select select = new Select(page.parentDepartmentDropdown);
         select.selectByValue("361");
         BrowserUtils.sleep(4);
-         page.closeButton.click();
-       // BrowserUtils.sleep(4);
-       //  Assert.assertFalse(page.closeButton.isDisplayed());
+
+
     }
 
     @When("The {string} icon should be clickable and once clicked, it should bring out the {string} input box on display.")
     public void theIconShouldBeClickableAndOnceClickedItShouldBringOutTheInputBoxOnDisplay(String arg0, String arg1) {
-        
+
+
+        // Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.xpath("//iframe[@id='maininterfacebuttons-tmp-frame-top_menu_id_company']")));
+        //  BrowserUtils.sleep(4);
+        page.addChildDepartment.click();
+        BrowserUtils.sleep(3);
+        page.popupDepartmentContent.isDisplayed();
     }
 
     @And("Once Hr User clicks on the {string} button, the user should display the pop-up message.")
     public void onceHrUserClicksOnTheButtonTheUserShouldDisplayThePopUpMessage(String arg0) {
-        
+
     }
 
     @Then("Hr user should accepts the warning message and click {string} and delete the added child department.")
     public void hrUserShouldAcceptsTheWarningMessageAndClickAndDeleteTheAddedChildDepartment(String arg0) {
-        Actions action = new Actions(Driver.getDriver());
-        action.moveToElement(page.editDepartment).perform();
+        //  Actions action = new Actions(Driver.getDriver());
+        //  action.moveToElement(page.editDepartment).perform();
 
     }
-}
 
+    @When("user clicks on the {string} department.")
+    public void userClicksOnTheDepartment(String department) {
+        Driver.getDriver().findElement(By.linkText(department)).click();
+    }
+
+
+    @And("user fills in the {string} input box and click {string} button.")
+    public void userFillsInTheInputBoxAndClickButton(String arg0, String arg1) {
+        page.departmentNameInputBox.sendKeys("Esra");
+        page.addButton.click();
+    }
+
+    @And("user verifies {string} message on display.")
+    public void userVerifiesMessageOnDisplay(String arg0) {
+        Assert.assertTrue(page.addedMessage.isDisplayed());
+    }
+
+
+    @And("user closes the {string} box.")
+    public void userClosesTheBox(String arg0) {
+        page.closeButton.click();
+
+    }
+
+    @And("user clicks {string} under actions sub-title.")
+    public void userClicksUnderActionsSubTitle(String string) {
+        Driver.getDriver().findElement(By.linkText(string)).click();
+    }
+
+    @And("user verifies {string} subdepartment is displayed as a new subdepartment.")
+    public void userVerifiesSubdepartmentIsDisplayedAsANewSubdepartment(String arg0) {
+        WebElement subdepartment = Driver.getDriver().findElement(By.linkText("Esra"));
+        Assert.assertTrue(subdepartment.isDisplayed());
+    }
+
+
+    @And("user selects {string}\" from the recent list.")
+    public void userSelectsFromTheRecentList(String arg0)  {
+        page.recentOption.click();
+
+    }
+
+    @And("user display the option on the page.")
+    public void userDisplayTheOptionOnThePage() {
+       WebElement email= Driver.getDriver().findElement(By.linkText("gurhan@cybertekschool.com"));
+       Assert.assertTrue(email.isDisplayed());
+    }
+
+    @And("user saves the updates")
+    public void userSavesTheUpdates() {
+        page.saveButton.click();
+    }
+
+    @And("user clicks on {string} button below Actions title")
+    public void userClicksOnButtonBelowActionsTitle(String arg0) {
+        Driver.getDriver().findElement(By.linkText("Delete department")).click();
+
+    }
+
+    @And("user approves the alert message to delete the department.")
+    public void userApprovesTheAlertMessageToDeleteTheDepartment() {
+        Alert alert = Driver.getDriver().switchTo().alert();
+        alert.accept();
+        
+    }
+
+    @Then("user verifies department is deleted from the page.")
+    public void userVerifiesDepartmentIsDeletedFromThePage() {
+    }
+}
