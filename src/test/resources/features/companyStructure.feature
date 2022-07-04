@@ -7,6 +7,7 @@ Feature:Company structure feature
     When user enters username "hr3@cybertekschool.com"
     And user enters password "UserUser"
     Then user hits to login button
+
 #//div[@id='Single_T1qHzC_search']
 
   Scenario:All user types should be able to display company structure
@@ -94,14 +95,22 @@ Feature:Company structure feature
 
 
 
-
-  @wip  #ask
+    #ask
   Scenario:Hr user should be able to edit departments, add child departments, and delete departments after adding the department.
     Given user clicks on the employee tab below Activity stream
     When user clicks on the "dfdf" department.
     And user clicks on "delete department" button below Actions title
     And user approves the alert message to delete the department.
     Then user verifies department is deleted from the page.
+
+
+  Scenario:Hr user should be able to drag and drop the existing department under another department as a subdepartment.
+    Given user clicks on the employee tab below Activity stream
+    When user hover over "hr5" and drags and drop the department under "hr1.1" department
+
+
+
+
 
 
 

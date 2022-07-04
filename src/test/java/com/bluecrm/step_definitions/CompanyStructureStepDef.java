@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.crypto.spec.PSource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -266,15 +267,15 @@ public class CompanyStructureStepDef {
 
 
     @And("user selects {string}\" from the recent list.")
-    public void userSelectsFromTheRecentList(String arg0)  {
+    public void userSelectsFromTheRecentList(String arg0) {
         page.recentOption.click();
 
     }
 
     @And("user display the option on the page.")
     public void userDisplayTheOptionOnThePage() {
-       WebElement email= Driver.getDriver().findElement(By.linkText("gurhan@cybertekschool.com"));
-       Assert.assertTrue(email.isDisplayed());
+        WebElement email = Driver.getDriver().findElement(By.linkText("gurhan@cybertekschool.com"));
+        Assert.assertTrue(email.isDisplayed());
     }
 
     @And("user saves the updates")
@@ -292,10 +293,31 @@ public class CompanyStructureStepDef {
     public void userApprovesTheAlertMessageToDeleteTheDepartment() {
         Alert alert = Driver.getDriver().switchTo().alert();
         alert.accept();
-        
+
     }
 
     @Then("user verifies department is deleted from the page.")
     public void userVerifiesDepartmentIsDeletedFromThePage() {
+    }
+
+    @When("user hover over {string} and drags and drop the department under {string} department")
+    public void userHoverOverAndDragsAndDropTheDepartmentUnderDepartment(String department1, String department2) {
+
+        WebElement hr5 = Driver.getDriver().findElement(By.linkText(department1));
+        WebElement hr1 = Driver.getDriver().findElement(By.linkText(department2));
+        Actions actions = new Actions(Driver.getDriver());
+        actions.dragAndDrop(hr5, hr1).perform();
+
+
+    }
+
+    @Then("user cannot observe {string} feature on company structure.")
+    public void userCannotObserveFeatureOnCompanyStructure(String arg0) {
+
+        try {
+            Assert.assertFalse(page.addDepartmentTab.isDisplayed());
+        } catch (Exception e) {
+            System.out.println("add department tab doesn't exist on company structure");
+        }
     }
 }
