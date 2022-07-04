@@ -41,10 +41,9 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Failures Overview</title>
+<title>Cucumber Reports  - Feature: Company structure feature</title>
 
 </head>
-
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
@@ -55,7 +54,7 @@ $(document).ready(function() {
         <li role="presentation" ><a href="overview-features.html">Features</a></li>
         <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
         <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
-        <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
       </ul>
     </div>
   </div>
@@ -88,10 +87,67 @@ $(document).ready(function() {
 
 <div id="report-lead" class="container-fluid">
   <div class="col-md-10 col-md-offset-1">
-    <h2>Failures Overview</h2>
-      <p>The following summary displays scenarios that failed.</p>
+    <h2>Feature Report</h2>
   </div>
 </div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">Company structure feature</td>
+          <td      class="passed"    >7</td>
+          <td      class="failed"    >1</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">8</td>
+
+          <td >0</td>
+          <td  class="failed"    >1</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="14499675800">14.499</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
 
 
 <div class="container-fluid">
@@ -109,14 +165,186 @@ $(document).ready(function() {
 <div class="container-fluid" id="report">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
 
-        <div class="elements">
+<div class="tags indention">
+</div>
+
+
+<div class="brief failed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">Company structure feature</span>
+
+
+</div>
+
+        <div class="description indention">  User Story: I should be able to use functions on Company Structure under Employee menu.</div>
+
+        <div class="elements inner-level">
 
 <div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_2077722833.html">Company structure feature</a>
-    </div>
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">12.691</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">user is on the login page of Bluecrm app</span>
+
+  <span class="lead-duration duration">7.401</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user enters username <span class="argument">&quot;hr3@cybertekschool.com&quot;</span></span>
+
+  <span class="lead-duration duration">0.162</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enters password <span class="argument">&quot;UserUser&quot;</span></span>
+
+  <span class="lead-duration duration">0.151</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user hits to login button</span>
+
+  <span class="lead-duration duration">4.975</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
 
 
 <div class="tags indention">
@@ -128,7 +356,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">1.808</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-3">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -141,14 +369,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-3" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-4">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -160,7 +388,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-4" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -260,10 +488,10 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
           <a>org.openqa.selenium.ElementNotInteractableException:</a>
       </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
+      <div id="msg-5" class="collapse collapsable-details  in ">
         <pre>org.openqa.selenium.ElementNotInteractableException: element not interactable: [object HTMLDivElement] has no size and location
   (Session info: chrome=103.0.5060.66)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
@@ -314,6 +542,7 @@ Session ID: 7421ad31a67d0b2199cfb2674d9eb540
 
         </div>
 
+      </div>
     </div>
   </div>
 </div>

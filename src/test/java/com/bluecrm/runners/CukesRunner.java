@@ -14,9 +14,9 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/bluecrm/step_definitions",
         dryRun= false,//it means I turned it off and it will execute my codes
-        tags = "",
+        tags = "@wip"
         //tags ="@Regression"
-        publish = false
+        //publish = false
 )
 public class CukesRunner {
 
