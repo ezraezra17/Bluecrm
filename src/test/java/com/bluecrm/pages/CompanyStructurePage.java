@@ -95,8 +95,7 @@ public class CompanyStructurePage {
     @FindBy(xpath = "//div[@id='popup-window-content-BXStructure']")
     public WebElement popupDepartmentContent;
 
-    //@FindBy(xpath = "(//div[@title='Add child department'])[2]")
-    @FindBy(xpath="//*[@id=\"bx_str_361\"]/div[1]/div[2]/div[3]")
+    @FindBy(xpath = "(//div[@title='Add child department'])[2]")
     public WebElement editDepartment;
 
 

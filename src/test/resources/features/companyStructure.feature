@@ -56,7 +56,6 @@ Feature:Company structure feature
     Then user selects an option from the company list and display the option
 
 
-  @wip
   Scenario:Hr user should be able to close add department pop-up at any time before sending.
     Given user clicks on the employee tab below Activity stream
     When user clicks on the "add department"
@@ -71,7 +70,7 @@ Feature:Company structure feature
     Then user hits the close button any time before sending
 
 
-
+  @wip
   Scenario:Hr user should be able to edit departments, add child departments, and delete departments after adding the department.
     Given user clicks on the employee tab below Activity stream
     When The "add child department" icon should be clickable and once clicked, it should bring out the "add department" input box on display.
@@ -79,6 +78,7 @@ Feature:Company structure feature
     Then Hr user should accepts the warning message and click "ok" and delete the added child department.
 
 
+  Scenario:
 
 
 
