@@ -10,11 +10,29 @@ Feature:Company structure feature
 
 #//div[@id='Single_T1qHzC_search']
 
-  Scenario:All user types should be able to display company structure
+
+  Scenario Outline:All user types should be able to display company structure
     Given user should be displaying the employee link below the Activity Stream
     And user clicks on the employee tab below Activity stream
+    And  user should be displaying the company structure
+    And user clicks on the logout button
+    And user is on the login page of Bluecrm app
+    And user enters "<username>"
+    And user enters password "UserUser"
+    And user hits to login button
+    And user should be displaying the employee link below the Activity Stream
+    And  user clicks on the employee tab below Activity stream
     Then user should be displaying the company structure
 
+    Examples:
+      | username                      |
+      | helpdesk2@cybertekschool.com  |
+
+
+
+
+
+  @wip
   Scenario:Hr user should be able to add a department from the company structure.
     Given user clicks on the employee tab below Activity stream
     When  user clicks on the "add department"
@@ -107,6 +125,9 @@ Feature:Company structure feature
   Scenario:Hr user should be able to drag and drop the existing department under another department as a subdepartment.
     Given user clicks on the employee tab below Activity stream
     When user hover over "hr5" and drags and drop the department under "hr1.1" department
+
+
+
 
 
 

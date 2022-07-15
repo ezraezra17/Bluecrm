@@ -10,7 +10,7 @@ Feature:Company structure feature
     And user clicks on the employee tab below Activity stream
     Then user cannot observe "add department" feature on company structure.
 
-  @wip
+
   Scenario: Helpdesk and marketing users can not change company structure.
     Given user is on the login page of Bluecrm app
     When user enters username "helpdesk2@cybertekschool.com "

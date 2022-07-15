@@ -120,5 +120,9 @@ public class CompanyStructurePage {
     @FindBy(xpath = "(//div[.='Gurhan'])[1]")
     public WebElement recentOption;
 
+    @FindBy(id="bx-panel-logout")
+    public WebElement logout;
+
+
 
 }

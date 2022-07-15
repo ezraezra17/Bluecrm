@@ -320,4 +320,17 @@ public class CompanyStructureStepDef {
             System.out.println("add department tab doesn't exist on company structure");
         }
     }
+
+    @And("user enters {string}")
+    public void userEnters(String username) {
+        page.username.clear();
+         page.username.sendKeys(username);
+
+
+    }
+
+    @And("user clicks on the logout button")
+    public void userClicksOnTheLogoutButton() {
+page.logout.click();
+    }
 }
